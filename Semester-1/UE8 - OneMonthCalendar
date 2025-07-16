@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+
+void print_initial_spacing(int start_day) {
+    for (int i = 1; i < start_day; i++) {
+        printf("   "); 
+    }
+}
+
+int main() {
+    int tage_im_monat, erster_tag;
+
+    printf("number of days in month: ");
+    scanf("%d", &tage_im_monat);
+    printf("starting day of week (1=Monday, 7=Sunday): \n");
+    scanf("%d", &erster_tag);
+    
+    print_initial_spacing(erster_tag);
+
+   
+    for (int tag = 1; tag <= tage_im_monat; ) {
+        
+        for (int spalte = erster_tag; spalte <= 7 && tag <= tage_im_monat; spalte++) {
+            printf("%2d ", tag);  
+            tag++;
+        }
+        printf("\n");  
+        erster_tag = 1;  
+    }
+
+    return 0;
+}
+
