@@ -1,0 +1,50 @@
+#include <stdio.h>
+
+int eingabe(double betraege[], int max) {
+    int i;
+    for (i = 0; i < max; i++) {
+        printf("Zahl %d: ", i + 1);
+        scanf("%lf", &betraege[i]);
+        if (betraege[i] < 0) break;
+    }
+    return i;  
+}
+
+double sum(double betraege[], int anzahl) {
+    double gesamt = 0;
+    for (int i = 0; i < anzahl; i++) {
+        gesamt += betraege[i];
+    }
+    return gesamt;
+}
+
+double praemien(double betraege[], int anzahl, double grenze, double praemie) {
+    double gesamtPraemien = 0;
+    for (int i = 0; i < anzahl; i++) {
+        if (betraege[i] >= grenze) {
+            betraege[i] += praemie;
+            gesamtPraemien += praemie;
+        }
+    }
+    return gesamtPraemien;
+}
+
+#define anz 10
+int main() {
+    double arr[anz] = {0};
+    double grenze, praemie, gesamt;
+    int n;
+
+    n = eingabe(arr, anz);
+    printf("Untergrenze: ");
+    scanf("%lf", &grenze);
+    printf("Praemie: ");
+    scanf("%lf", &praemie);
+
+    printf("Summe vor Praemien: %.2f\n", sum(arr, n));
+    gesamt = praemien(arr, n, grenze, praemie);
+    printf("Praemien gesamt: %.2f\n", gesamt);
+    printf("Summe nach Praemien: %.2f\n", sum(arr, n));
+
+    return 0;
+}
