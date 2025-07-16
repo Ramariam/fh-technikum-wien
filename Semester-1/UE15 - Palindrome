@@ -1,0 +1,55 @@
+#include <stdio.h>
+#include <string.h>
+
+int isPalindrome(char input[]);
+
+int main()
+{
+    char input[41];
+
+    printf(": ");
+    fgets(input, 41, stdin); 
+
+    if (isPalindrome(input))
+    {
+        printf("true");
+    }
+    else
+    {
+        printf("false");
+    }
+}
+
+int isPalindrome(char input[])
+{
+    int i = 0;
+    int j = strlen(input);
+
+    while (i < j)
+    {
+        if ((input[i] >= 'A' && input[i] <= 'Z') || (input[i] >= 'a' && input[i] <= 'z'))
+        {
+            if ((input[j] >= 'A' && input[j] <= 'Z') || (input[j] >= 'a' && input[j] <= 'z'))
+            {
+                if (input[i] != input[j] && input[i] != input[j] + 32 && input[i] != input[j] - 32)
+                {
+                    return 0;
+                }
+                else
+                {
+                    ++i;
+                    --j;
+                }
+            }
+            else
+            {
+                --j;
+            }
+        }
+        else
+        {
+            ++i;
+        }
+    }
+    return 1;
+}
