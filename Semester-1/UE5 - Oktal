@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{  int oktalzahl =0;
+   int dezimalzahl;
+   int i =0 ;
+   int sum= 0;
+
+   scanf (" %d", &oktalzahl);
+
+   while (oktalzahl != 0) {
+        int remainder = oktalzahl % 10;
+        dezimalzahl += remainder * pow(8, i);
+        oktalzahl /= 10;
+        i++;}
+        printf(": dec.: %d ", dezimalzahl);
+
+        while (dezimalzahl != 0) {
+        int digit = dezimalzahl % 10;
+        sum += digit;
+        dezimalzahl /= 10;}
+        printf("\nZS: %d", sum);
+
+    return 0;
+}
