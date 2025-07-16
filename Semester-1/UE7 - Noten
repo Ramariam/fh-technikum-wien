@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int note1, note2, note3;
+
+    int result = scanf("%1d%1d%1d", &note1, &note2, &note3);
+    
+    if (result != 3){
+        printf("Noten: Erwarte genau 3 Noten!\n");
+        return 1;
+    }
+    if(getchar() != '\n') { 
+        printf("Noten: Erwarte genau 3 Noten!\n");
+        return 1;
+    }
+    
+    if (note1 < 1 || note1 > 5) {
+        printf("Noten: Erste Note muss zwischen 1 und 5 liegen!\n");
+        return 1;
+    }
+    if (note2 < 1 || note2 > 5){
+        printf("Noten: Zweite Note muss zwischen 1 und 5 liegen!\n");
+        return 1;
+    }
+    if (note3 < 1 || note3 > 5){
+        printf("Noten: Dritte Note muss zwischen 1 und 5 liegen!\n");
+        return 1;
+    }
+
+    
+    
+
+    if (note1 == 1 && note2 == 1 && note3 == 1) {
+        printf("Noten: Ausgezeichneter Erfolg!\n");
+    } else if ((note1 == 1 && note2 == 1) || (note1 == 1 && note3 == 1) || (note2 == 1 && note3 == 1)) {
+        printf("Noten: Guter Erfolg!\n");
+    } else if (note1 == 5 || note2 == 5 || note3 == 5) {
+        printf("Noten: Nicht bestanden!\n");
+    } else {
+        printf("Noten: Bestanden.\n");
+    }
+
+    return 0;
+}
