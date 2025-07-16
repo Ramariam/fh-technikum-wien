@@ -1,0 +1,9 @@
+#include <stdio.h>
+
+int main()
+{
+    double i;
+    scanf("%lf", &i);
+    printf(": With tax: %.2f", i*1.2);
+    return 0;
+}
