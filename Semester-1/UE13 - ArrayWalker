@@ -1,0 +1,126 @@
+#include <stdio.h>
+
+typedef struct robot
+{
+    int x;
+    int y;
+    char field[10][10];
+} Robot;
+
+void initArray(Robot* bot);
+void printArray(Robot* bot);
+void moveRobot(Robot* bot, char direction);
+
+int main()
+{
+    Robot bot;
+    char direction;
+
+    initArray(&bot);
+    printArray(&bot);
+
+    while (1)
+    {
+        printf("walk to:\n");
+        scanf(" %c", &direction);
+
+        if (direction == 'x')
+        {
+            break;
+        }
+        moveRobot(&bot, direction);
+    }
+    return 0;
+}
+
+void initArray(Robot* bot)
+{
+    for (int i = 0; i < 10; ++i)
+    {
+        for (int j = 0; j < 10; ++j)
+        {
+            bot -> field[i][j] = '.';
+        }
+    }
+    bot -> x = 0;
+    bot -> y = 0;
+    bot -> field[bot -> x][bot -> y] = 'A';
+}
+
+void printArray(Robot* bot)
+{
+    for (int i = 0; i < 10; ++i)
+    {
+        for (int j = 0; j < 10; ++j)
+        {
+            if (bot -> field[i][j] == '[')
+            {
+                bot -> field[i][j] = 'A';
+            }
+            printf("%c", bot -> field[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+void moveRobot(Robot* bot, char direction)
+{
+    switch (direction)
+    {
+        case 'n':
+            if (bot -> x > 0 && bot -> field[bot -> x - 1][bot -> y] == '.')
+            {
+                bot -> field[bot -> x - 1][bot -> y] = bot -> field[bot -> x][bot -> y] + 1;
+                --bot -> x;
+                printArray(bot);
+            }
+            else
+            {
+                printf("not possible\n");
+            }
+            break;
+
+        case 'e':
+            if (bot -> y < 10-1 && bot -> field[bot -> x][bot -> y + 1] == '.')
+            {
+                bot -> field[bot -> x][bot -> y + 1] = bot -> field[bot -> x][bot -> y] + 1;
+                ++bot -> y;
+                printArray(bot);
+            }
+            else
+            {
+                printf("not possible\n");
+            }
+            break;
+
+        case 's':
+            if (bot -> x < 10-1 && bot -> field[bot -> x + 1][bot -> y] == '.')
+            {
+                bot -> field[bot -> x + 1][bot -> y] = bot -> field[bot -> x][bot -> y] + 1;
+                ++bot -> x;
+                printArray(bot);
+            }
+            else
+            {
+                printf("not possible\n");
+            }
+            break;
+
+        case 'w':
+            if (bot -> y > 0 && bot -> field[bot -> x][bot -> y - 1] == '.')
+            {
+                bot -> field[bot -> x][bot -> y - 1] = bot -> field[bot -> x][bot -> y] + 1;
+                --bot -> y;
+                printArray(bot);
+            }
+            else
+            {
+                printf("not possible\n");
+            }
+            break;
+
+        default:
+            printf("invalid direction\n");
+            break;
+    }
+}
