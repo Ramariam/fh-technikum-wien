@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    int hour, min;
+
+    scanf("%d : %d", &hour, &min);
+    if (hour >= 0 && hour <= 23 && min >= 0 && min <= 59) {
+        char *period = (hour >= 12) ? "PM" : "AM";
+
+        if (hour > 12) {
+            hour -= 12;
+        } else if (hour == 0) {
+            hour = 12;
+        }
+
+        printf("24h time: 12h time: %2d:%02d %s", hour, min, period);
+    }
+
+    return 0;
+}
