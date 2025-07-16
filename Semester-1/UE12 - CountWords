@@ -1,0 +1,86 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+char** scanWords();
+int countWord(char *text, char *word);
+void freeAll(char **strngs);
+
+int main ()
+{
+    char input[1000];
+
+    printf("text: ");
+    scanf("%1000[^\n]s", input);
+    printf("words: \n");
+
+    char **words = scanWords();
+    int i = 0;
+
+    while(strlen(words[i]) != 0)
+    {
+        printf("%s: %d\n", words[i], countWord(input, words[i]));
+        ++i;
+    }
+    freeAll(words);
+
+    return 0;
+}
+
+char** scanWords()
+{
+    char** words= (char**)calloc(1, sizeof(char*)), **tmp;
+    int i = 0;
+
+    while (1)
+    {
+        char buf[81];
+
+        scanf("%80s", buf);
+
+        if(buf[0] == '-')
+        {
+            break;
+        }
+
+        if(NULL == (tmp = (char**)realloc(words, sizeof(char*)*(i+2))))
+        {
+            printf("out of memory");
+            break;
+        }
+        words = tmp;
+        words[i] = (char*)calloc(strlen(buf)+1, sizeof(char));
+        strcpy(words[i], buf);
+        ++i;
+    }
+    words[i] = (char*)calloc(1,sizeof(char));
+
+    return words;
+}
+
+int countWord(char *text, char *word)
+{
+    int count = 0;
+    char *str;
+    str = strstr(text, word);
+
+    while (str != NULL)
+    {
+        ++count;
+        str += strlen(word);
+        str = strstr(str, word);
+    }
+    return count;
+}
+
+void freeAll(char **strngs)
+{
+    int i = 0;
+    while (strlen(strngs[i]) != 0)
+    {
+        free(strngs[i]);
+        ++i;
+    }
+    free(strngs[i]);
+    free(strngs);
+}
