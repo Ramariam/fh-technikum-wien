@@ -1,0 +1,55 @@
+#include <stdio.h>
+
+
+void analyzeInput()
+{
+    int frequency[80] = {0}; 
+    char ch;
+    int totalChars = 0; 
+    int currentWordLength = 0; 
+
+    printf(": ");
+
+    while (ch != '.')
+    {
+        scanf("%c", &ch);
+
+        
+        if ((totalChars >= 80) || (!((ch >= 'a' && ch <= 'z') || (ch == ' ')
+             || (ch >= 'A' && ch <= 'Z') || (ch == '.'))))
+        {
+            printf("NOT VALID\n");
+            return;
+        }
+        totalChars++;
+
+    
+        if (ch == ' ' || ch == '.')
+        {
+        if(currentWordLength > 0)
+            {
+                frequency[currentWordLength]++;
+                currentWordLength = 0;
+            }
+        }
+        else
+        {
+            currentWordLength++;
+        }
+    }
+
+    
+    for(int i = 0; i < 80; i++)
+    {
+        if(frequency[i] > 0)
+        {
+            printf("Length %d: %d\n", i, frequency[i]);
+        }
+    }
+}
+
+int main()
+{
+    analyzeInput(); 
+    return 0;
+}
