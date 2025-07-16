@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-color: lightblue; /* Hintergrundfarbe ändern */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.8); /* Hintergrundfarbe ändern */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: white; /* Textfarbe ändern */
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+p {
+    font-weight: bold;
+}
+
+a {
+    color: #4CAF50;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.logo {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 200px;
+    height: 100px;
+}

@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #add8e6; /* Light blue background */
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+.upload-section, .reservation-section {
+    background-color: #ffffff; /* White sections */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+.upload-section h2, .reservation-section h2 {
+    color: #00008b; /* Dark blue headings */
+}

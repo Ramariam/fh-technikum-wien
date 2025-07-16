@@ -1,0 +1,91 @@
+/* Gemeinsame Stile für den gesamten Inhalt */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header-Stile */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Container-Stile */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* H1-Stile */
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* P-Stile für Buchungsinformationen */
+p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Formular-Stile */
+form {
+    text-align: left;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+select {
+    height: 36px;
+}
+
+input[type="submit"] {
+    background-color: #337ab7;
+    border: 1px solid #2e6da4;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+
+input[type="submit"]:hover {
+    background-color: #286090;
+    border: 1px solid #204d74;
+}
+
+/* Fehlermeldung-Stile */
+.error {
+    color: red;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Erfolgsmeldung-Stile */
+.success {
+    color: green;
+    margin-top: 10px;
+    text-align: center;
+}

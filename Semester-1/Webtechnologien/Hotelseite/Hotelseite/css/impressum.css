@@ -1,0 +1,98 @@
+/* Gemeinsame Stile für alle Bildschirmgrößen */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-color: #add8e6;
+}
+
+header {
+    background: #333;
+    color: #add8e6;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Fügen Sie diese Zeile hinzu, um auf kleine Bildschirme umzubrechen */
+    align-items: center;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: grey;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.back-to-home {
+    display: block;
+    width: max-content;
+    margin: 20px auto;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    background-color: #333;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.content {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.container img {
+    max-width: 100%; /* Ändern Sie die Breite auf maximale Breite für responsives Verhalten */
+    height: auto;
+}
+
+h1 {
+    color: white;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    color: white;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100px;
+}
+
+/* Media Query für Bildschirme kleiner als 768px */
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 100%; /* Container auf volle Bildschirmbreite ändern */
+        padding: 10px;
+    }
+
+    .content {
+        flex: 1;
+        margin-right: 0;
+        margin-top: 20px; /* Abstand nach oben hinzufügen */
+    }
+
+    .container img {
+        width: 100%; /* Bild auf volle Breite ändern */
+    }
+}

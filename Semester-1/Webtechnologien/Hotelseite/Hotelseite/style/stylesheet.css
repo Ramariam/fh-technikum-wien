@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-color: lightblue;
+}
+
+header {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.hotel-info {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: white;
+    margin: 10px;
+}
+
+.section {
+    clear: both;
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+}
+
+.footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-around;
+    background: #333;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    flex-wrap: wrap;
+}
+
+.logo {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 200px;
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: flex;
+}
+
+@media screen and (max-width: 390px) {
+    .container {
+        width: 95%;
+    }
+
+    .hotel-info, .hotel-image img {
+        min-width: 100%;
+    }
+}

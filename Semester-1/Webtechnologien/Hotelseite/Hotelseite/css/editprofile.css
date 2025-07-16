@@ -1,0 +1,121 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+/* Header Styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Container Styles */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* H2 Styles */
+h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Form Styles */
+form {
+    text-align: left;
+}
+
+label {
+    font-weight: bold;
+}
+
+
+input[type="text#reservationId"] {
+    width: auto; /* Automatische Breite basierend auf dem Inhalt */
+    padding: 8px; /* Padding-Wert nach Bedarf anpassen */
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: inline-block; /* Eingabefelder werden in einer Zeile angezeigt */
+    box-sizing: border-box; /* Box-Sizing beibehalten */
+}
+
+
+select {
+    height: 36px;
+}
+
+input[type="submit"] {
+    background-color: #337ab7;
+    border: 1px solid #2e6da4;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #286090;
+    border: 1px solid #204d74;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Neue Spalte für Reservierungsstatus */
+th:nth-child(3), td:nth-child(3) {
+    width: 20%; /* Breite der Reservierungsstatus-Spalte anpassen */
+}
+
+/* Dropdown-Menü für Reservierungsstatus */
+select[name="newBookingStatus"] {
+    width: 100%;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 36px;
+}
+
+input[type="submit"][name="updateBookingStatus"] {
+    background-color: #337ab7;
+    border: 1px solid #2e6da4;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 5px;
+}

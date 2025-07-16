@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: lightblue; /* Hintergrundfarbe ändern */
+    color: #333; /* Standard Textfarbe */
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9); /* Heller Hintergrund für den Container */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #333; /* Farbe für Überschriften */
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.5;
+    color: #333; /* Farbe für Text */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label, input, select {
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+input[type='submit'] {
+    background-color: #4CAF50; /* Hintergrundfarbe für den Submit-Button */
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    font-size: 1em;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: auto; /* Anpassung für bessere Responsive-Fähigkeit */
+}
