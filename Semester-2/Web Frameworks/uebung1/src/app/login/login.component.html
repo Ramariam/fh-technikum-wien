@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login-Formular</title>
+    <link rel = "stylesheet" href= "login.component.css">
+</head>
+<body>
+    <form action="/submit-your-login-form" method="post">
+        <div>
+            <label for="email">E-Mail-Adresse:</label>
+            <input type="email" id="email" [(ngModel)]="email" name="email" required>
+            <span>{{ email }}</span>
+          </div>
+          <div>
+            <label for="password">Passwort:</label>
+            <input type="password" id="password" [(ngModel)]="password" name="password" required>
+            <span>{{ password }}</span>
+          </div>
+          <div>
+            <label for="confirm_password">Passwort bestätigen:</label>
+            <input type="password" id="confirm_password" [(ngModel)]="confirmPassword" name="confirm_password" required>
+            <span>{{ confirmPassword }}</span>
+          </div>          
+        <button type="submit">Login</button>
+    </form>
+</body>
+</html>
+
+  
