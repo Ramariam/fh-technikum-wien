@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1717944694 source:c:\users\samar\onedrive\desktop\code-block\zuglinie\main.cpp
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+	<unordered_map>
+	<unordered_set>
+	<queue>
+	<tuple>
+	<limits>
+	<string>
+	<algorithm>
+	<regex>
+	<chrono>
+
