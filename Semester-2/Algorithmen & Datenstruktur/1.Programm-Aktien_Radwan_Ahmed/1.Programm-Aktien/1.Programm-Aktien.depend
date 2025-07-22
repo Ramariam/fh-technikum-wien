@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1712501276 source:c:\users\samar\onedrive\desktop\code-block\1.programm-aktien\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdbool.h>
+
