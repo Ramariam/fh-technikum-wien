@@ -1,0 +1,62 @@
+body {
+	background-color: antiquewhite;
+	font-family: 'Courier New', Courier, monospace;
+}
+
+.container {
+	margin: 10vh auto;
+	width: 350px; 
+	padding: 1rem; 
+	text-align: center;
+	border-radius: 10px;
+	background-color: #272727;
+}
+
+.header {
+	margin: 1rem;
+	color: white;
+}
+
+input {
+	width: 250px; 
+	padding: 0.5rem 1rem; 
+	font-size: 2rem; 
+	border-radius: 10px;
+	text-align: right;
+	background-color: #272727;
+	color: antiquewhite;
+}
+
+.buttons {
+	margin: auto;
+	width: 300px; 
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+button {
+	padding: 20px; /* Kleinere Polsterung */
+	font-size: 16px; /* Kleinere Schriftgröße */
+	margin: 0.25rem; /* Kleinerer Abstand */
+	max-width: 80px; /* Reduzierte Breite */
+	max-height: 80px; /* Reduzierte Höhe */
+	text-align: center;
+	border-radius: 10%;
+
+	font-weight: 900;
+	background-color: #272727;
+	color: antiquewhite;
+}
+
+#History {
+      padding: 10px 20px;
+      margin: auto;
+      width: 200px;
+      height: 120px;
+      text-align: center;
+      border-radius: 10%;
+      box-sizing: border-box;
+      overflow-y: scroll;
+      background-color: antiquewhite;
+}
